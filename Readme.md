@@ -7,8 +7,18 @@
 * Hilbert Curve (Hilbert space-filling curve)
 
 ![hilbert](images/hilbert.png)
-Edit By [MaHua](http://mahua.jser.me)
 
 ## Hausdorff Dimension
 
-* Calculating fractional dimension for 2D images
+* Calculating fractional dimension for 2D images, using box counting method. 
+  for example, the following sierpinski triangle has fractional dimension of approximatly 1.58
+
+![sierpinski](images/1024-Sierpinski_triangle.png)
+
+## Mandelbrot Set
+
+* classical fratals
+
+![mandelbrot](images/mandelbrot.png)
+
+Edit By [MaHua](http://mahua.jser.me)

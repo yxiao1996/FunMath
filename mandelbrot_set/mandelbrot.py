@@ -4,7 +4,7 @@ pyximport.install()
 import numpy as np
 from veriPoint import veriPoint_c, veriPoint
 
-world_size = 16384
+world_size = 1024
 world = np.zeros((world_size, world_size, 3), dtype=np.uint8)
 graph_offset = world_size / 2
 
@@ -49,7 +49,7 @@ for i in range(graph_offset):
     #cv2.imshow("mandelbrot", cv2.resize(world, (2048, 2048)))
     if i % 8 == 0:
         print i / 8
-    #    cv2.imshow("mandelbrot", world)
-    #    cv2.waitKey(1)
-cv2.imwrite("16384.jpg", world)
-#cv2.waitKey(0)
+        cv2.imshow("mandelbrot", world)
+        cv2.waitKey(1)
+#cv2.imwrite("16384.jpg", world)
+cv2.waitKey(0)

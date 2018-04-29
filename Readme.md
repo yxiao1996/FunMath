@@ -21,4 +21,10 @@
 
 ![mandelbrot](images/mandelbrot.png)
 
+## Brachistochron
+
+* Visualizing Johann Bernoulli's solution of Brachistochron using Fermat's Principle
+
+! [bernoulli's brachistochron](images/brachistochron.png)
+
 Edit By [MaHua](http://mahua.jser.me)

@@ -6,8 +6,10 @@ num_step = 1000
 world_size = 1024
 world = np.zeros((world_size, world_size, 3), dtype=np.uint8)
 dtft_world = np.zeros((256, num_step, 3), dtype=np.uint8)
+offset = 1.0
 
 data = [0.0, 0.1, 0.2, 0.3, 1.0, 1.0, 1.0, 1.0, 0.3, 0.2, 0.1, 0.0]
+#data = np.random.normal(0.0, 1.0, 50)
 
 def Roll(data, omega):
     roll_data = []
@@ -56,7 +58,7 @@ def drawDTFT(norm, step, world):
 
 def VisualizeDTFT(data):
     for i in range(len(data)):
-        data[i] += 1.0
+        data[i] += offset
     omega_step_size = 4.0 * np.pi / num_step
     for i in range(num_step+1):
         world = np.zeros((world_size, world_size, 3), dtype=np.uint8)
@@ -69,7 +71,7 @@ def VisualizeDTFT(data):
         drawDTFT(norm, i, dtft_world)
         cv2.imshow('viz', world)
         cv2.imshow('dtft', dtft_world)
-        cv2.waitKey(10)
+        cv2.waitKey(50)
 
 VisualizeDTFT(data)
 cv2.waitKey(0)

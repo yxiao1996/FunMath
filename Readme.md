@@ -27,4 +27,11 @@
 
 ![bernoulli's brachistochron](images/brachistochron.png)
 
+## Discrete Time Fourier Transform
+
+* Visualizing the porcess of rolling data points on unit circle in complex plane, which take
+  place in the calculation of discrete time Fourier Transform
+
+![dtft](images/dtft.png)
+
 Edit By [MaHua](http://mahua.jser.me)

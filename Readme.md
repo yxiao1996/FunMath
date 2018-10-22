@@ -34,4 +34,8 @@
 
 ![dtft](images/dtft.png)
 
-Edit By [MaHua](http://mahua.jser.me)
+## Chebyshev Center of a polygon
+
+* Using linear programming to find the Chebyshev center of a polygon(center of the inscribe circle with maximum radius).
+
+![chebyshev](images/chebyshev_center.png)

@@ -11,7 +11,7 @@ class ChebyshevCenter(object):
 
     def __init__(self):
 
-        self.poly = polygon(num_point=10)
+        self.poly = polygon(num_point=50)
 
     def showPolygon(self):
 
@@ -66,18 +66,19 @@ class ChebyshevCenter(object):
                 else:
                     a[0] = -a[0]
                     a[1] = -a[1]
-                    b = -b
+                    #b = -b
             elif (a[0] < 0 and a[1] < 0):
                 if (sign):
                     a[0] = -a[0]
                     a[1] = -a[1]
                 else:
-                    b = -b
+                    #b = -b
+                    pass
             elif (a[0] > 0 and a[1] < 0):
                 if (sign):
                     a[0] = -a[0]
                     a[1] = -a[1]
-                    b = -b
+                    #b = -b
                 else:
                     pass
             else:
@@ -86,7 +87,7 @@ class ChebyshevCenter(object):
                 else:
                     a[0] = -a[0]
                     a[1] = -a[1]
-                    b = -b
+                    #b = -b
             a = np.concatenate((a, [1]))
             A.append(a)
             B.append(b)
@@ -100,8 +101,8 @@ class ChebyshevCenter(object):
 
         A, b, c = self._transform()
 
-        x0_bounds = (0, None)
-        x1_bounds = (0, None)
+        x0_bounds = (None, None)
+        x1_bounds = (None, None)
         x2_bounds = (0, None)
 
         res = linprog([0, 0, -1], A_ub=A, b_ub=b, bounds=(x0_bounds, x1_bounds, x2_bounds), options={"disp": True})

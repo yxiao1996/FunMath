@@ -13,7 +13,7 @@ class polygon(object):
         
         self.size = size
 
-        self.points = np.random.rand(num_point, 2) * size
+        self.points = np.random.rand(num_point, 2) * size - (size / 2)
 
         self.hull = ConvexHull(self.points)
 
